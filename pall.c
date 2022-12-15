@@ -1,26 +1,24 @@
 #include "monty.h"
 
 /**
- * pall - Function that prints
- * all the values of the stack
- * @stack: The adress of the stack to print
- * @line_number: The line number of the
- * opcode being executed
+* f_pall - function that prints everything in the stack
+* @head: double head pointer to the stack
+* @counter: unused line count
+*
+* Return: nothing
 */
-
-void pall(stack_t **stack, unsigned int line_number)
+void f_pall(stack_t **head, unsigned int counter)
 {
-	stack_t *temp = *stack;
-	int counter = 0;
-	(void) line_number;
+	stack_t *h;
+	(void)counter;
 
-	while (temp != NULL)
+	h = *head;
+	if (h == NULL)
+		return;
+	while (h)
 	{
-		printf("%d\n", temp->n);
-		counter++;
-		temp = temp->next;
+		printf("%d\n", h->n);
+		h = h->next;
 	}
-
-
-
 }
+
