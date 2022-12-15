@@ -1,10 +1,12 @@
 #include "monty.h"
 
 /**
-  * push - Adds and element to the top of a stack
-  * @stack: Adress of the stack where the element is to be added
-  * @line_number: The line number of the opcode currently being executed
-  */
+ * push - Adds and element to the top of a stack
+ * @stack: Adress of the stack
+ * where the element is to be added.
+ * @line_number: The line number of the opcode
+ * currently being executed.
+*/
 
 void push(stack_t **stack, unsigned int line_number)
 {
